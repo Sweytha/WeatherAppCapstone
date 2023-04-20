@@ -22,14 +22,11 @@ jobs:
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
           
-      - name: Checkout code to frontend folder
-        uses: actions/checkout@v2
-        with:
-          path: WeatherApp-FrontEnd 
-
-      - name: Install the dependencies
-        run: npm install
-        
+      - name: Install dependencies and build frontend
+        run: |
+          cd WeatherApp-FrontEnd
+          npm install
+          npm run build
 
       - name: Upload frontend artifact
         uses: actions/upload-artifact@v2
