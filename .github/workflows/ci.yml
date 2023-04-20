@@ -15,17 +15,17 @@ jobs:
     steps:
       - uses: actions/checkout@v3
           
-      - name: Checkout code to frontend folder
-        uses: actions/checkout@v2
-        with:
-          path: WeatherApp-FrontEnd   
-
       - name: Install Node.js and npm
         uses: actions/setup-node@v3
         with:
           node-version: '18.12.1'
           cache: 'npm'
           cache-dependency-path: '**/package-lock.json'
+          
+      - name: Checkout code to frontend folder
+        uses: actions/checkout@v2
+        with:
+          path: WeatherApp-FrontEnd 
 
       - name: Install dependencies and build frontend
         run: |
