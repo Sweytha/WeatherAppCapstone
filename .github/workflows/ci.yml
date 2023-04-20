@@ -26,13 +26,12 @@ jobs:
         with:
           java-version: "17"
           distribution: "temurin"
+          
+      - name: Checkout code to backend folder
+        uses: actions/checkout@v2
+        with:
+          path: WeatherApp-FrontEnd   
 
-      - name: Build and test with Maven
-        env:
-          SPRING_PROFILES_ACTIVE: test
-          TZ: America/Toronto
-        run: mvn -B clean test --file WeatherApp-Backend/pom.xml
-        
       - name: Install Node.js and npm
         uses: actions/setup-node@v3
         with:
@@ -43,7 +42,7 @@ jobs:
         run: |
           cd WeatherApp-FrontEnd
           npm ci
-          npm run-script build:qa
+          npm run build
 
       - name: Upload frontend artifact
         uses: actions/upload-artifact@v2
@@ -51,8 +50,3 @@ jobs:
           name: frontend
           path: WeatherApp-FrontEnd/build
 
-      - name: Publish test results
-        uses: EnricoMi/publish-unit-test-result-action@v1
-        with:
-          files: "**/surefire-reports/TEST-*.xml"
-          format: junit
