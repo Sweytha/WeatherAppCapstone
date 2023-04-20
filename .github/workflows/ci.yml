@@ -42,7 +42,7 @@ jobs:
       - name: Install dependencies and build frontend
         run: |
           cd WeatherApp-FrontEnd
-          npm install
+          npm ci
           npm run build
 
       - name: Upload frontend artifact
