@@ -43,7 +43,7 @@ jobs:
         run: |
           cd WeatherApp-FrontEnd
           npm ci
-          npm run build
+          npm run-script build:qa
 
       - name: Upload frontend artifact
         uses: actions/upload-artifact@v2
