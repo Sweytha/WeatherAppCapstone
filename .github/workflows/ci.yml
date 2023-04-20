@@ -34,7 +34,7 @@ jobs:
         run: mvn -B clean test --file pom.xml
         
       - name: Install Node.js and npm
-        uses: actions/setup-node@v2.5.3
+        uses: actions/setup-node@v3
         with:
           node-version: '18.12.1'
           cache: 'npm'
