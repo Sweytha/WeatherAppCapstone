@@ -5,6 +5,7 @@ import Signup from "../user/Signup";
 import ResetPassword from "../user/ResetPassword";
 import VerifyEmail from "../user/VerifyEmail";
 import ResetEmailLink from "../user/ResetEmailLink";
+
 import LoadingIndicator from "../components/LoadingIndicator/LoadingIndicator";
 import WeatherData from "../components/CurrentWeatherData/WeatherData";
 import HistoryWeatherData from "../components/HistoryWeatherData/HistoryWeatherData";
@@ -50,7 +51,8 @@ const App = () => {
         />
       </Routes>
     );
-  } else {
+  } 
+  else {
     return (
       <Routes>
         <Route path="*" element={<Navigate to="/" replace />} />

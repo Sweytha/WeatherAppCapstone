@@ -6,4 +6,8 @@ module.exports = defineConfig({
       // implement node event listeners here
     },
   },
+  env: {
+    appUrl: "http://localhost:3000",
+    backendUrl: "http://localhost:8080",
+  },
 });

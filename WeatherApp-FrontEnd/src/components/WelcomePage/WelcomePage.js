@@ -53,10 +53,10 @@ const WelcomePage = ({ currentUser }) => {
         <BsChevronCompactRight onClick={nextSlide} size={30} />
       </div>
       <div className="flex top-4 justify-center py-2">
-        {slides.map((slideIndex) => (
+        {slides.map((slideItem,index) => (
           <div
-            key={slideIndex}
-            onClick={() => goToSlide(slideIndex)}
+            key={slideItem}
+            onClick={() => goToSlide(index)}
             className="text-2xl cursor-pointer"
           >
             <RxDotFilled />
