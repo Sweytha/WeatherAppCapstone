@@ -27,11 +27,9 @@ jobs:
         with:
           path: WeatherApp-FrontEnd 
 
-      - name: Install dependencies and build frontend
-        run: |
-          cd WeatherApp-FrontEnd
-          npm install
-          npm run build
+      - name: Install the dependencies
+        run: npm install
+        
 
       - name: Upload frontend artifact
         uses: actions/upload-artifact@v2
