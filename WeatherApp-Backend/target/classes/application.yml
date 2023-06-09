@@ -29,7 +29,7 @@ spring:
     # Email Settings
   mail:
     username: obsidi.academy@gmail.com
-    password: emiyerxmzsipfnpl
+    password: ouanitsfezzffbvn
     host: smtp.gmail.com
     port: 587
     protocol: smtp
@@ -67,7 +67,7 @@ spring:
         
 # Database Settings
   datasource:
-    url: jdbc:postgresql://academydb.javadev.ca:5432/postgres
+    url: jdbc:postgresql://academydb.javadev.ca:5432/weatherApp
     username: academy
     password: academy123#
     hikari:
@@ -89,7 +89,7 @@ spring:
   
 # Database Settings
   datasource:
-    url: jdbc:postgresql://academydb.javadev.ca:5432/postgres
+    url: jdbc:postgresql://academydb.javadev.ca:5432/weatherApp
     username: academy
     password: academy123#
     hikari:
