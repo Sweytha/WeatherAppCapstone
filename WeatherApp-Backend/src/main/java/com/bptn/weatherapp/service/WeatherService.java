@@ -143,6 +143,7 @@ public class WeatherService {
 		return weather;
 	}
 
+	//get weather based on city name
 	public Weather getWeather(String city, boolean save) throws JsonMappingException, JsonProcessingException {
 
 		String username = SecurityContextHolder.getContext().getAuthentication().getName();
